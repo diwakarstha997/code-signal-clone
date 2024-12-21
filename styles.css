@@ -7,6 +7,7 @@ body {
 .flex-container {
     display: flex;
     justify-content: space-between;
+    gap: 12px;
 }
 
 .top-bar {
@@ -18,6 +19,7 @@ body {
 
 /* Side Bar Css */
 .side-bar {
+    border: 1px solid rgba(45, 56, 85, 1);
     background-color: rgba(29, 38, 59, 1);
     color: white;
 }
@@ -26,5 +28,65 @@ body {
     padding: 20px;
 }
 
+/* Infromation Board */
+.information-board {
+    border: 1px solid rgba(45, 56, 85, 1);
+    background-color: white;
+    color: black;
+}
+
+.information-board-collapse {
+    position: relative;
+    top: 5px;
+    left: 90%;
+}
+
+/* Code Editor Css */
+.code-editor {
+    border: 1px solid rgba(45, 56, 85, 1);
+    background-color: rgba(29, 38, 59, 1);
+    color: white;
+}
+
+.code-editor-top-bar {
+    border: 1px solid rgba(45, 56, 85, 1);
+}
+
+.code-editor-file-tab {
+    border: 1px solid rgba(45, 56, 85, 1);
+    padding: 5px
+}
+
+.code-editor-control-tab {
+    padding: 5px
+}
+
+.code-editor-text-area > textarea{
+    width: 98%;
+    resize: none;
+    background-color: rgba(29, 38, 59, 1);
+}
+
+
+/* Code Output Css */
+.code-output {
+    border: 1px solid rgba(45, 56, 85, 1);
+    background-color: rgba(29, 38, 59, 1);
+    color: white;
+}
+
+.code-output-top-bar {
+    border: 1px solid rgba(45, 56, 85, 1);
+}
+
+.code-output-run-button {
+}
+
+
+.code-output-area{
+    width: 100%;
+    height: 300px;
+    background-color: rgba(29, 38, 59, 1);
+}
 
 
