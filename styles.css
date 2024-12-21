@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Top Bar Css */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-bar {
+    border: 1px solid rgba(45, 56, 85, 1);
+    background-color: rgba(29, 38, 59, 1);
+    color: white;
+    padding: 10px 5px;
+}
+
+/* Side Bar Css */
+.side-bar {
+    background-color: rgba(29, 38, 59, 1);
+    color: white;
+}
+
+.side-bar-tab {
+    padding: 20px;
+}
+
+
+
