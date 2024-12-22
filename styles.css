@@ -1,6 +1,52 @@
 body {
     margin: 0;
     padding: 0;
+
+    /* Setting total Viewport for grid */
+    height: 100vh;
+    width: 100vw;
+
+    display: grid;
+    grid-template-columns: 100px 1fr 2fr;
+    grid-template-rows: 40px repeat(3, 1fr);
+
+    grid-template-areas: 
+            "top-bar top-bar top-bar"
+            "side-bar information-board code-editor"
+            "side-bar information-board code-editor"
+            "side-bar information-board code-output";
+}
+
+
+
+#top-bar {
+    grid-area: top-bar;
+}
+
+#side-bar {
+    grid-area: side-bar;
+}
+
+#information-board {
+    grid-area: information-board;
+}
+
+#code-editor {
+    grid-area: code-editor;
+}
+
+#code-output {
+    grid-area: code-output;
+}
+
+/* Setting Up background of parents */
+#top-bar,
+#side-bar,
+#code-editor,
+#code-output {
+    border: 1px solid rgba(45, 56, 85, 1);
+    background-color: rgba(29, 38, 59, 1);
+    color: white;
 }
 
 /* Top Bar Css */
@@ -11,15 +57,11 @@ body {
 }
 
 .top-bar {
-    border: 1px solid rgba(45, 56, 85, 1);
-    background-color: rgba(29, 38, 59, 1);
-    color: white;
     padding: 10px 5px;
 }
 
 /* Side Bar Css */
 .side-bar {
-    border: 1px solid rgba(45, 56, 85, 1);
     background-color: rgba(29, 38, 59, 1);
     color: white;
 }
@@ -30,24 +72,22 @@ body {
 
 /* Infromation Board */
 .information-board {
-    border: 1px solid rgba(45, 56, 85, 1);
     background-color: white;
     color: black;
+    position: relative;
 }
 
 .information-board-collapse {
-    position: relative;
+    position: absolute;
     top: 5px;
-    left: 90%;
+    right: 10px;
+}
+
+.information-box {
+    height: 93.5vh;
 }
 
 /* Code Editor Css */
-.code-editor {
-    border: 1px solid rgba(45, 56, 85, 1);
-    background-color: rgba(29, 38, 59, 1);
-    color: white;
-}
-
 .code-editor-top-bar {
     border: 1px solid rgba(45, 56, 85, 1);
 }
@@ -62,30 +102,23 @@ body {
 }
 
 .code-editor-text-area > textarea{
-    width: 98%;
+    width: 64vw;
+    height: 58vh;
     resize: none;
     background-color: rgba(29, 38, 59, 1);
+    border: none;
 }
 
 
 /* Code Output Css */
-.code-output {
-    border: 1px solid rgba(45, 56, 85, 1);
-    background-color: rgba(29, 38, 59, 1);
-    color: white;
-}
-
 .code-output-top-bar {
     border: 1px solid rgba(45, 56, 85, 1);
+    padding: 10px;
 }
-
-.code-output-run-button {
-}
-
 
 .code-output-area{
     width: 100%;
-    height: 300px;
+    height: 30vh;
     background-color: rgba(29, 38, 59, 1);
 }
 
